@@ -7,13 +7,16 @@ def get_response(user_input: str) -> str:
 
     if lowered == '':
         return 'Well you\'re awfully silent...'
-    elif 'hello' in lowered:
-        return 'Hello there!'
+    elif 'hello' or 'hi' in lowered:
+        return 'Hej!'
     elif 'how are you' in lowered:
-        return 'Good, thanks!'
+        return 'Jag mår bra tack.'
     elif 'bye' in lowered:
-        return 'See you later!'
+        return 'Hej då!'
     elif 'roll dice' in lowered:
-        return f'You rolled: {randint(1,6)}'
+        return f'Du rullade en {randint(1,6)}'
+    elif 'club' in lowered:
+        return 'University of Auckland Swedish Club is a newly formed (2023) club focussing on appreciating Swedish culture!'
     else:
-        return choice(['I don\'t understand...', 'What do you mean?', 'Can you rephrase that?'])
+        return choice(['Jag förstår inte (I don\'t understand...)', 'Vad menar du? (What do you mean?)',
+                        'Kan du omformulera det? (Can you rephrase that?)'])
